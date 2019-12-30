@@ -18,5 +18,9 @@ let iv = Buffer.from(text.iv, 'hex');
  return decrypted.toString();
  }
 var hw = encrypt("Some serious stuff")
-console.log(hw)
-console.log(decrypt(hw))
+console.log(hw);
+console.log(decrypt(hw));
+
+var bhw = encrypt(Buffer.from("Some serious stuff","utf-8"))
+console.log(bhw);
+console.log(decrypt(bhw));
